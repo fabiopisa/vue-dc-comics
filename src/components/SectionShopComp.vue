@@ -2,24 +2,34 @@
   <section class="container">
     <ul>
       <li>
-        <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-        <h4>DIGITAL COMICS</h4>
+        <a href="#">
+          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+          <h4>DIGITAL COMICS</h4>
+        </a>
       </li>
       <li>
-        <img src="../assets/img/buy-comics-merchandise.png" alt="">
-        <h4>DIGITAL COMICS</h4>
+        <a href="#">
+          <img src="../assets/img/buy-comics-merchandise.png" alt="">
+          <h4>DIGITAL COMICS</h4>
+        </a>
       </li>
       <li>
-        <img src="../assets/img/buy-comics-subscriptions.png" alt="">
-        <h4>DIGITAL COMICS</h4>
+        <a href="#">
+          <img src="../assets/img/buy-comics-subscriptions.png" alt="">
+          <h4>DIGITAL COMICS</h4>
+        </a>
       </li>
       <li>
-        <img class="special-img-shop" src="../assets/img/buy-comics-shop-locator.png" alt="">
-        <h4>DIGITAL COMICS</h4>
+        <a href="#">
+          <img class="special-img-shop" src="../assets/img/buy-comics-shop-locator.png" alt="">
+          <h4>DIGITAL COMICS</h4>
+        </a>
       </li>
       <li>
-        <img src="../assets/img/buy-dc-power-visa.svg" alt="">
-        <h4>DIGITAL COMICS</h4>
+        <a href="#">
+          <img src="../assets/img/buy-dc-power-visa.svg" alt="">
+          <h4>DIGITAL COMICS</h4>
+        </a>
       </li>
     </ul>
   </section>
@@ -45,17 +55,25 @@ section{
     li{
       display: flex;
       align-items: center;
-      img{
-        width: 40px
+      a{
+        display: flex;
+        align-items: center;
+        img{
+          width: 40px
+        };
+        img.special-img-shop{
+          width: 30px
+        };
+        h4{
+          font-size: 12px;
+          color: #FFFFFF;
+          margin-left: 10px;
+        };
       };
-      img.special-img-shop{
-        width: 30px
+      a:hover h4{
+        color: #000000;
       };
-      h4{
-        font-size: 12px;
-        color: #FFFFFF;
-        margin-left: 10px;
-      };
+
 
     };
   };
