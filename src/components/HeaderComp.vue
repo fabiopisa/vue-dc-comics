@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="container">
     <a href="#">
       <img src="../assets/img/dc-logo.png" alt="">
     </a>
@@ -78,9 +78,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/style/vars.scss';
 header{
-  background-color: grey;
   height: 100px;
-  padding: 0 15%;
   display: flex;
   align-items: center;
   justify-content: space-between;
