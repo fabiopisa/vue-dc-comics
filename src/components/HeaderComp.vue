@@ -3,10 +3,13 @@
     <a href="#">
       <img src="../assets/img/dc-logo.png" alt="">
     </a>
-    <ul>
-      <li><a href=""></a></li>
+    <div class="box-list">
+      <ul>
+      <li v-for="(link, index) in links" :key="index + 'header list'">
+        <a href="link.url" :class="{'active': link.current}">{{link.text}}</a>
+      </li>
     </ul>
-    <div class="box-list"></div>
+    </div>
   </header>
 </template>
 
@@ -24,7 +27,7 @@ export default {
         {
           text:'COMICS',
           url: '#',
-          current: true
+          current: false
         },
         {
           text:'MOVIES',
@@ -69,21 +72,34 @@ export default {
       ]
    }
  }
+}
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/vars.scss';
 header{
   background-color: grey;
   height: 100px;
-  padding: 0 20%;
+  padding: 0 15%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   a{
+    padding: 36px 10px;
+    font-size: 12px;
+    color: #000000;
+    &:hover,
+    &.active{
+      color:$color-blue ;
+      border-bottom: 3px solid $color-blue ;
+    }
     img{
       width: 75px;
-    }
-  }
+    };
+  };
+  ul{
+    display: flex;
+  };
 
 }
 </style>

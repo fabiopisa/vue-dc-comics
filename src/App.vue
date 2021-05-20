@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <HeaderComp/>
+    <MainComp/>
 
   </div>
 </template>
 
 <script>
 import HeaderComp from './components/HeaderComp.vue'
+import MainComp from './components/MainComp.vue'
 
 export default {
   name: 'App',
   components: {
-    HeaderComp
+    HeaderComp,
+    MainComp
     
   }
 }
@@ -19,12 +22,5 @@ export default {
 
 <style lang="scss">
 //general
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-ul{
- list-style: none;
-}
+@import './assets/style/general.scss';
 </style>
