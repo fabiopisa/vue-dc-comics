@@ -1,9 +1,9 @@
 <template>
  
-  <div>
-    <img :src="card.thumb" alt="">
-    <h4>{{card.series}}</h4>
-  </div>
+  <li>
+    <img :src="cardSingle.thumb" :alt="cardSingle.type">
+    <h4>{{cardSingle.series}}</h4>
+  </li>
   
 </template>
 
@@ -17,16 +17,23 @@ export default {
 </script>
 
 <style lang ="scss" scoped>
-img{
-  width: 80%;
-  height:20vh;
-  margin: 0 10%;      
-};
-h4{
-  color: #FFFFFF;
-  font-size: 10px;
-  text-transform: uppercase;
-  margin-top: 15px;
-  padding: 0 15px
+li{
+  flex-basis: calc(100% / 6);
+  margin-bottom: 30px;
+  text-align: left;
+  height: 25vh;
+  img{
+    width: 80%;
+    height:20vh;
+    margin: 0 10%;
+  };
+  h4{
+    color: #FFFFFF;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    padding: 0 15px;
+  };
+
 };
 </style>

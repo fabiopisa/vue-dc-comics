@@ -1,16 +1,11 @@
 <template>
   <main class="container">
     <ul>
-      <li
-      v-for="(card, index) in cards"
-      :key="index"
-      >
         <CardComp
-        :card="card"
+        v-for="(card, index) in cards"
+        :key="index"
+        :cardSingle="card"
         />
-        <!-- <img :src="card.thumb" alt="">
-        <h4>{{card.series}}</h4> -->
-      </li>
     </ul>
 
     <button>LOAD MORE</button>
@@ -19,12 +14,15 @@
 
 <script>
 import cards from '../assets/data/dc-comics.js';
-import cardSingle from 'CardComp';
+import CardComp from '@/components/CardComp.vue';
 
 export default {
  name:'MainComp',
+ components:{
+    CardComp
+ },
  data(){
-   return {cards, cardSingle}
+   return {cards, CardComp}
  },
  mounted(){
    console.log(cards);
@@ -44,25 +42,6 @@ main{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    li{
-      flex-basis: calc(100% / 6);
-      margin-bottom: 30px;
-      text-align: left;
-      height: 25vh;
-      /* img{
-        width: 80%;
-        height:20vh;
-        margin: 0 10%;
-      };
-      h4{
-        color: #FFFFFF;
-        font-size: 10px;
-        text-transform: uppercase;
-        margin-top: 15px;
-        padding: 0 15px;
-      }; */
-
-    };
   };
   button{
     @include button-blue;
