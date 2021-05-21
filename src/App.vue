@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <HeaderComp/>
+    <JumbotronComp/>
     <MainComp/>
     <SectionShopComp/>
     <FooterComp/>
@@ -13,6 +14,7 @@ import HeaderComp from './components/HeaderComp.vue'
 import MainComp from './components/MainComp.vue'
 import SectionShopComp from './components/SectionShopComp.vue'
 import FooterComp from './components/FooterComp.vue'
+import JumbotronComp from './components/JumbotronComp.vue'
 
 export default {
   name: 'App',
@@ -21,7 +23,7 @@ export default {
     MainComp,
     SectionShopComp,
     FooterComp,
-    
+    JumbotronComp,
   }
 }
 </script>
